@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>EvoStrings</title>
+<meta name="description" content="EvoStrings, trio d'archi elettrici per matrimoni ed eventi.">
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0b0b0c; --ink: #ecebe6; --muted: #a9a69f; --gold: #d6b46f;
+    --display: "Didot", "Bodoni 72", "Bodoni MT", "Playfair Display", Georgia, serif;
+    --body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  html, body { height: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink); font-family: var(--body); line-height: 1.5;
+    display: grid; place-items: center; text-align: center;
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+    padding-block: 40px;
+  }
+  main { display: grid; gap: 18px; justify-items: center; }
+  h1 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 9vw, 72px); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin: 0; }
+  p { margin: 0; color: var(--muted); }
+  nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 24px; margin-top: 10px; }
+  a { color: var(--ink); text-underline-offset: 4px; }
+  a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>EvoStrings</h1>
+  <p>Trio d'archi elettrici per matrimoni ed eventi<br>Electric string trio for weddings &amp; events</p>
+  <nav>
+    <a href="https://www.instagram.com/evostringslive/">Instagram</a>
+    <a href="https://www.evostrings.it/">evostrings.it</a>
+    <a href="privacy.html">Privacy</a>
+  </nav>
+</main>
+</body>
+</html>

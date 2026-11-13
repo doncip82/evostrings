@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>EvoStrings · Showreel 2027</title>
+<meta name="description" content="Electric string trio for weddings in Italy: two violins and a cello. Watch our 2027 showreel.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="EvoStrings · Showreel 2027">
+<meta property="og:description" content="Electric string trio for weddings in Italy: two violins and a cello. Watch our 2027 showreel.">
+<meta property="og:url" content="https://doncip82.github.io/evostrings/showreel/">
+<meta property="og:image" content="https://doncip82.github.io/evostrings/showreel/media/copertina-EN.jpg">
+<link rel="alternate" hreflang="en" href="https://doncip82.github.io/evostrings/showreel/">
+<link rel="alternate" hreflang="it" href="https://doncip82.github.io/evostrings/showreel/it/">
+<style>
+html, body { margin: 0; }
+img { max-width: 100%; }
+/* Layout: una colonna stretta come una cartella stampa: logo, titolo, video, poi le schede brevi e il contatto.
+   Una sola veste, come il sito e il logo: nero, oro, argento, titoli in Didot. Nessun carattere o risorsa da altri siti
+   (sulla pagina vera vale la privacy del sito: niente risorse esterne). */
+:root {
+  color-scheme: dark;
+  --nero: #0b0b0c; --nero2: #141416; --argento: #ecebe6; --tenue: #a9a69f; --oro: #d6b46f; --linea: #2a2926;
+  --titolo: "Didot", "Bodoni 72", "Bodoni MT", "Playfair Display", Georgia, serif;
+  --testo: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+* { box-sizing: border-box; }
+body { background: var(--nero); color: var(--argento); font-family: var(--testo); font-size: 17px; line-height: 1.6; }
+.pagina { max-width: 760px; margin: 0 auto; padding-block: 28px 64px;
+  padding-left: max(20px, env(safe-area-inset-left, 0px)); padding-right: max(20px, env(safe-area-inset-right, 0px));
+  display: flex; flex-direction: column; gap: 56px; }
+.testa { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.testa img { width: 170px; height: auto; display: block; }
+.lingue { display: flex; gap: 14px; font-size: 14px; letter-spacing: .06em; }
+.lingue a { color: var(--tenue); text-decoration: none; }
+.lingue a[aria-current="true"] { color: var(--oro); }
+a { color: var(--oro); text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--oro); outline-offset: 3px; }
+.etichetta { font-size: 13px; letter-spacing: .3em; text-transform: uppercase; color: var(--oro); font-weight: 600;
+  display: flex; align-items: center; gap: 14px; }
+.etichetta::before { content: ""; width: 36px; height: 1px; background: var(--oro); }
+h1, h2 { font-family: var(--titolo); font-weight: 400; margin: 0; text-wrap: balance; }
+h1 { font-size: clamp(38px, 7.5vw, 60px); line-height: 1.04; }
+h2 { font-size: clamp(28px, 5vw, 36px); line-height: 1.1; }
+p { margin: 0; max-width: 62ch; }
+.apertura { display: flex; flex-direction: column; gap: 18px; }
+.apertura .sotto { font-family: var(--titolo); font-style: italic; color: var(--oro); font-size: clamp(22px, 4vw, 28px); line-height: 1.2; }
+.apertura p.lead { color: var(--argento); font-size: 18px; }
+
+/* il video: verticale sul telefono, 16:9 sul computer (uno solo si vede e si scarica) */
+.schermo { display: flex; flex-direction: column; gap: 10px; }
+.schermo video { display: block; width: 100%; max-width: 100%; background: #000; }
+.schermo .v16 { aspect-ratio: 16 / 9; }
+.schermo .v9 { aspect-ratio: 9 / 16; max-width: 420px; margin: 0 auto; display: none; }
+@media (max-width: 820px) and (orientation: portrait) {
+  .schermo .v16 { display: none; }
+  .schermo .v9 { display: block; }
+}
+.schermo .nota { font-size: 13px; color: var(--tenue); text-align: center; }
+
+.blocco { display: flex; flex-direction: column; gap: 18px; border-top: 1px solid var(--linea); padding-top: 34px; }
+.punti { margin: 4px 0 10px; display: flex; flex-direction: column; }
+.punti div { display: grid; grid-template-columns: minmax(0, 190px) minmax(0, 1fr); gap: 2px 18px; padding: 14px 0; border-bottom: 1px solid var(--linea); }
+.punti div:first-child { border-top: 1px solid var(--linea); }
+.punti dt { font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: var(--oro); font-weight: 600; padding-top: 5px; }
+.punti dd { margin: 0; font-family: var(--titolo); font-size: 21px; line-height: 1.35; }
+.punti .ascolta { display: block; margin-top: 6px; font-family: var(--testo); font-size: 15px; }
+@media (max-width: 520px) { .punti div { grid-template-columns: 1fr; } }
+.schede { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 22px; }
+.scheda { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.scheda b { font-family: var(--titolo); font-weight: 400; font-size: 24px; color: var(--argento); }
+.scheda span { color: var(--tenue); font-size: 15px; }
+.momenti { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; }
+.momenti li { display: grid; grid-template-columns: minmax(0, 190px) minmax(0, 1fr); gap: 4px 18px; padding: 12px 0; border-bottom: 1px solid var(--linea); }
+.momenti li b { font-family: var(--titolo); font-weight: 400; font-size: 21px; }
+.momenti li span { color: var(--tenue); font-size: 15px; align-self: center; }
+@media (max-width: 520px) { .momenti li { grid-template-columns: 1fr; } }
+.luoghi { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 20px 28px; }
+.luoghi div { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.luoghi .citta { font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: var(--oro); font-weight: 600; }
+.luoghi .posti { font-family: var(--titolo); font-size: 20px; line-height: 1.35; }
+.contatto { align-items: center; text-align: center; border-top: 1px solid var(--oro); }
+.contatto h2 { color: var(--oro); }
+.contatto .mail { font-size: clamp(20px, 4vw, 24px); letter-spacing: .06em; color: var(--argento); user-select: all; }
+.contatto .mail a { color: inherit; }
+.piede { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 26px; font-size: 14px; color: var(--tenue); }
+.piede a { color: var(--argento); }
+</style>
+</head>
+<body>
+<div class="pagina">
+  <div class="testa">
+    <img src="media/evostrings-logo.png" alt="EvoStrings" width="1200" height="237">
+    <nav class="lingue" aria-label="Lingua / Language">
+      <a href="./" data-lingua="en">English</a>
+      <a href="it/" data-lingua="it">Italiano</a>
+    </nav>
+  </div>
+
+  <header class="apertura">
+    <div class="etichetta" data-t="etichetta"></div>
+    <h1 data-t="titolo"></h1>
+    <div class="sotto" data-t="sotto"></div>
+    <p class="lead" data-t="lead"></p>
+  </header>
+
+  <section class="schermo" aria-label="Showreel">
+    <video class="v16" controls playsinline preload="none" poster="media/copertina-EN.jpg">
+      <source src="media/EvoStrings-showreel-2027-EN.mp4" type="video/mp4">
+    </video>
+    <video class="v9" controls playsinline preload="none" poster="media/copertina-EN-verticale.jpg">
+      <source src="media/EvoStrings-showreel-2027-EN-verticale.mp4" type="video/mp4">
+    </video>
+    <p class="nota" data-t="nota"></p>
+  </section>
+
+  <section class="blocco" aria-labelledby="h-chi">
+    <div class="etichetta" id="h-chi" data-t="chiE"></div>
+    <h2 data-t="chiT"></h2>
+    <p data-t="chiP"></p>
+    <dl class="punti" id="punti"></dl>
+    <div class="schede">
+      <div class="scheda"><b data-t="trioT"></b><span data-t="trioP"></span></div>
+      <div class="scheda"><b data-t="duoT"></b><span data-t="duoP"></span></div>
+      <div class="scheda"><b data-t="quartT"></b><span data-t="quartP"></span></div>
+    </div>
+  </section>
+
+  <section class="blocco" aria-labelledby="h-momenti">
+    <div class="etichetta" id="h-momenti" data-t="momE"></div>
+    <h2 data-t="momT"></h2>
+    <ul class="momenti" id="momenti"></ul>
+  </section>
+
+  <section class="blocco" aria-labelledby="h-luoghi">
+    <div class="etichetta" id="h-luoghi" data-t="luoE"></div>
+    <h2 data-t="luoT"></h2>
+    <div class="luoghi" id="luoghi"></div>
+  </section>
+
+  <section class="blocco contatto" aria-labelledby="h-date">
+    <h2 id="h-date" data-t="dateT"></h2>
+    <p data-t="dateP"></p>
+    <div class="mail"><a href="mailto:info@evostrings.it">info@evostrings.it</a></div>
+  </section>
+
+  <footer class="piede">
+    <a href="https://www.instagram.com/evostringslive/">Instagram · @evostringslive</a>
+    <a href="https://open.spotify.com/artist/5XXjv0dBUCtfD2Blqzk5UD">Spotify</a>
+    <a href="https://www.evostrings.it/">evostrings.it</a>
+    <a href="../privacy.html" data-t="privacy"></a>
+  </footer>
+</div>
+<script>
+const TESTI = {
+  en: {
+    etichetta: 'Showreel 2027',
+    titolo: 'Electric strings for weddings in Italy',
+    sotto: 'Two violins and a cello',
+    lead: 'From the ceremony to the party, we play original arrangements of film scores, pop and dance hits, from the seventies to today. Amplified strings fill terraces and gardens, with songs your guests recognise.',
+    nota: '93 seconds · ceremony, sunset, party · play with sound on',
+    chiE: 'Who we are', chiT: 'EvoStrings',
+    chiP: 'Two violins and a cello, electric or acoustic. From weddings to concert stages, in Italy and abroad.',
+    punti: [
+      ['Concerts', 'With Andrea Bocelli, Cheryl Porter and several Italian artists.'],
+      ['Corporate events', 'Including Berlin, February 2026, for more than 3,000 people.'],
+      ['Luxury weddings', 'Amalfi Coast, Sardinia, Tuscany and Emilia-Romagna.'],
+      ['On Spotify', 'Singles and albums, including our original piece Strings Rhapsody.', [['Strings Rhapsody', 'https://open.spotify.com/track/24yMrii6mGAIp5eR0tMklR'], ['Titanium (live)', 'https://open.spotify.com/track/5fSKL2pAsbBEIK4LLSYnFn'], ['All our music', 'https://open.spotify.com/artist/5XXjv0dBUCtfD2Blqzk5UD']]],
+    ],
+    trioT: 'Trio', trioP: 'Two violins and a cello, electric or acoustic.',
+    duoT: 'Duo', duoP: 'Violin and cello, electric.',
+    quartT: 'Quartet', quartP: 'With viola, on request, for a classic string quartet.',
+    momE: 'Moments', momT: 'One trio for the whole day',
+    momenti: [
+      ['Ceremony', 'From the couple’s entrance to their exit, outdoors too.'],
+      ['Aperitivo and dinner', 'From sunset into the evening, on the terrace or in the garden.'],
+      ['Cake cutting', 'The song you choose, played live.'],
+      ['DJ party', 'Live strings over the DJ set (DJ not included).'],
+    ],
+    luoE: 'Where we have played', luoT: 'From the Amalfi Coast to Berlin',
+    dateT: 'Available dates for 2027',
+    dateP: 'If you have a wedding in Italy in 2027, we’ll be happy to send you a quote.',
+    privacy: 'Privacy',
+  },
+  it: {
+    etichetta: 'Showreel 2027',
+    titolo: 'Archi elettrificati per matrimoni in Italia',
+    sotto: 'Due violini e un violoncello',
+    lead: 'Dal rito alla festa suoniamo arrangiamenti originali di colonne sonore, pop e dance, dagli anni Settanta a oggi. Gli archi amplificati riempiono terrazze e giardini, con brani che gli ospiti riconoscono.',
+    nota: '93 secondi · rito, tramonto, festa · da guardare con l’audio',
+    chiE: 'Chi siamo', chiT: 'EvoStrings',
+    chiP: 'Due violini e un violoncello, elettrificati o acustici. Dai matrimoni ai palchi dei concerti, in Italia e all’estero.',
+    punti: [
+      ['Concerti', 'Con Andrea Bocelli, Cheryl Porter e diversi artisti italiani.'],
+      ['Eventi aziendali', 'Fra cui Berlino, febbraio 2026, davanti a più di 3.000 persone.'],
+      ['Luxury wedding', 'Costiera Amalfitana, Sardegna, Toscana ed Emilia-Romagna.'],
+      ['Su Spotify', 'Singoli e album, fra cui il nostro inedito Strings Rhapsody.', [['Strings Rhapsody', 'https://open.spotify.com/track/24yMrii6mGAIp5eR0tMklR'], ['Titanium (live)', 'https://open.spotify.com/track/5fSKL2pAsbBEIK4LLSYnFn'], ['Tutta la nostra musica', 'https://open.spotify.com/artist/5XXjv0dBUCtfD2Blqzk5UD']]],
+    ],
+    trioT: 'Trio', trioP: 'Due violini e un violoncello, elettrificati o acustici.',
+    duoT: 'Duo', duoP: 'Violino e violoncello elettrificati.',
+    quartT: 'Quartetto', quartP: 'Con la viola, all’occorrenza, per il quartetto classico.',
+    momE: 'I momenti', momT: 'Un trio per tutta la giornata',
+    momenti: [
+      ['Rito', 'Dall’ingresso all’uscita degli sposi, anche all’aperto.'],
+      ['Aperitivo e cena', 'Dal tramonto alla sera, in terrazza o in giardino.'],
+      ['Taglio della torta', 'Il brano che scegliete voi, dal vivo.'],
+      ['DJ party', 'Gli archi dal vivo sopra la musica del DJ (il DJ non è compreso).'],
+    ],
+    luoE: 'Dove abbiamo suonato', luoT: 'Dalla Costiera Amalfitana a Berlino',
+    dateT: 'Date disponibili per il 2027',
+    dateP: 'Se avete un matrimonio in Italia nel 2027, siamo felici di mandarvi un preventivo.',
+    privacy: 'Privacy',
+  },
+};
+const LUOGHI = {
+  en: [['Ravello', 'Villa Cimbrone · Palazzo Avino · Belmond Hotel Caruso'], ['Positano', 'Villa Treville · Hotel Marincanto'],
+    ['Sorrento coast', 'Villa Angelina, Sorrento · Hotel Scrajo, Vico Equense'], ['Naples', 'Salone Margherita · Palazzo Belvedere · Villa Domi'],
+    ['Bologna', 'Salone del Podestà, Palazzo Re Enzo'], ['And also', 'Sardinia · Tuscany · Berlin']],
+  it: [['Ravello', 'Villa Cimbrone · Palazzo Avino · Belmond Hotel Caruso'], ['Positano', 'Villa Treville · Hotel Marincanto'],
+    ['Penisola Sorrentina', 'Villa Angelina, Sorrento · Hotel Scrajo, Vico Equense'], ['Napoli', 'Salone Margherita · Palazzo Belvedere · Villa Domi'],
+    ['Bologna', 'Salone del Podestà, Palazzo Re Enzo'], ['E poi', 'Sardegna · Toscana · Berlino']],
+};
+function mostra() {
+  const l = 'en';
+  const t = TESTI[l];
+  document.documentElement.lang = l;
+  document.querySelectorAll('[data-t]').forEach(e => { e.textContent = t[e.dataset.t]; });
+  const pu = document.getElementById('punti'); pu.textContent = '';
+  t.punti.forEach(([a, b, link]) => { const d = document.createElement('div'); const x = document.createElement('dt'); x.textContent = a;
+    const y = document.createElement('dd'); y.textContent = b;
+    if (link) { const l = document.createElement('span'); l.className = 'ascolta';
+      link.forEach(([n, u], i) => { if (i) l.append(' · '); const z = document.createElement('a'); z.href = u; z.textContent = n; l.appendChild(z); });
+      y.appendChild(l); }
+    d.append(x, y); pu.appendChild(d); });
+  const m = document.getElementById('momenti'); m.textContent = '';
+  t.momenti.forEach(([a, b]) => { const li = document.createElement('li'); const x = document.createElement('b'); x.textContent = a;
+    const y = document.createElement('span'); y.textContent = b; li.append(x, y); m.appendChild(li); });
+  const g = document.getElementById('luoghi'); g.textContent = '';
+  LUOGHI[l].forEach(([c, p]) => { const d = document.createElement('div'); const x = document.createElement('div'); x.className = 'citta'; x.textContent = c;
+    const y = document.createElement('div'); y.className = 'posti'; y.textContent = p; d.append(x, y); g.appendChild(d); });
+  document.querySelectorAll('.lingue a').forEach(a => a.setAttribute('aria-current', String(a.dataset.lingua === l)));
+}
+mostra();
+</script>
+</body>
+</html>

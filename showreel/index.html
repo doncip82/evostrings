@@ -80,6 +80,7 @@ p { margin: 0; max-width: 62ch; }
 .luoghi div { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .luoghi .citta { font-size: 12px; letter-spacing: .24em; text-transform: uppercase; color: var(--oro); font-weight: 600; }
 .luoghi .posti { font-family: var(--titolo); font-size: 20px; line-height: 1.35; }
+.altri { font-family: var(--titolo); font-style: italic; color: var(--oro); font-size: 20px; }
 .contatto { align-items: center; text-align: center; border-top: 1px solid var(--oro); }
 .contatto h2 { color: var(--oro); }
 .contatto .mail { font-size: clamp(20px, 4vw, 24px); letter-spacing: .06em; color: var(--argento); user-select: all; }
@@ -137,6 +138,7 @@ p { margin: 0; max-width: 62ch; }
     <div class="etichetta" id="h-luoghi" data-t="luoE"></div>
     <h2 data-t="luoT"></h2>
     <div class="luoghi" id="luoghi"></div>
+    <p class="altri" data-t="luoAltri"></p>
   </section>
 
   <section class="blocco contatto" aria-labelledby="h-date">
@@ -178,7 +180,8 @@ const TESTI = {
       ['Cake cutting', 'The song you choose, played live.'],
       ['DJ party', 'Live strings over the DJ set (DJ not included).'],
     ],
-    luoE: 'Where we have played', luoT: 'From the Amalfi Coast to Berlin',
+    luoE: 'Where we have played', luoT: 'A few of the places, from the Amalfi Coast to Berlin',
+    luoAltri: '…and many more, from private villas to castles and historic palaces.',
     dateT: 'Available dates for 2027',
     dateP: 'If you have a wedding in Italy in 2027, we’ll be happy to send you a quote.',
     privacy: 'Privacy',
@@ -207,18 +210,25 @@ const TESTI = {
       ['Taglio della torta', 'Il brano che scegliete voi, dal vivo.'],
       ['DJ party', 'Gli archi dal vivo sopra la musica del DJ (il DJ non è compreso).'],
     ],
-    luoE: 'Dove abbiamo suonato', luoT: 'Dalla Costiera Amalfitana a Berlino',
+    luoE: 'Dove abbiamo suonato', luoT: 'Alcuni dei posti, dalla Costiera Amalfitana a Berlino',
+    luoAltri: '…e molti altri, dalle ville private ai castelli e ai palazzi storici.',
     dateT: 'Date disponibili per il 2027',
     dateP: 'Se avete un matrimonio in Italia nel 2027, siamo felici di mandarvi un preventivo.',
     privacy: 'Privacy',
   },
 };
 const LUOGHI = {
-  en: [['Ravello', 'Villa Cimbrone · Palazzo Avino · Belmond Hotel Caruso'], ['Positano', 'Villa Treville · Hotel Marincanto'],
-    ['Sorrento coast', 'Villa Angelina, Sorrento · Hotel Scrajo, Vico Equense'], ['Naples', 'Salone Margherita · Palazzo Belvedere · Villa Domi'],
+  en: [['Ravello', 'Villa Cimbrone · Palazzo Avino · Belmond Hotel Caruso · Hotel Parsifal'], ['Positano', 'Villa Treville · Hotel Marincanto'],
+    ['Amalfi Coast', 'Hotel Tritone, Praiano · Palazzo Pascal, Scala · Torre La Cerniola, Erchie'],
+    ['Sorrento coast', 'Villa Angelina, Sorrento · Hotel Scrajo, Vico Equense'],
+    ['Naples', 'Salone Margherita · Palazzo Belvedere · Villa Domi · Villa Volpicelli · Nabilah, Bacoli'],
+    ['Rome', 'Casina Valadier'], ['Abruzzo', 'Niko Romito, Castel di Sangro'],
     ['Bologna', 'Salone del Podestà, Palazzo Re Enzo'], ['Berlin', 'Estrel Berlin'], ['And also', 'Sardinia · Tuscany']],
-  it: [['Ravello', 'Villa Cimbrone · Palazzo Avino · Belmond Hotel Caruso'], ['Positano', 'Villa Treville · Hotel Marincanto'],
-    ['Penisola Sorrentina', 'Villa Angelina, Sorrento · Hotel Scrajo, Vico Equense'], ['Napoli', 'Salone Margherita · Palazzo Belvedere · Villa Domi'],
+  it: [['Ravello', 'Villa Cimbrone · Palazzo Avino · Belmond Hotel Caruso · Hotel Parsifal'], ['Positano', 'Villa Treville · Hotel Marincanto'],
+    ['Costiera Amalfitana', 'Hotel Tritone, Praiano · Palazzo Pascal, Scala · Torre La Cerniola, Erchie'],
+    ['Penisola Sorrentina', 'Villa Angelina, Sorrento · Hotel Scrajo, Vico Equense'],
+    ['Napoli', 'Salone Margherita · Palazzo Belvedere · Villa Domi · Villa Volpicelli · Nabilah, Bacoli'],
+    ['Roma', 'Casina Valadier'], ['Abruzzo', 'Niko Romito, Castel di Sangro'],
     ['Bologna', 'Salone del Podestà, Palazzo Re Enzo'], ['Berlino', 'Estrel Berlin'], ['E poi', 'Sardegna · Toscana']],
 };
 function mostra() {
